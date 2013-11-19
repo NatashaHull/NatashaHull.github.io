@@ -76,6 +76,11 @@ h2 {
   color: white;
 }
 
+.wide {
+  height: auto;
+  width: 75px;
+}
+
 .projects {
   padding-bottom: 200px;
 }
