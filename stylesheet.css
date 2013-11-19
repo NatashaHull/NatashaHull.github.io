@@ -76,6 +76,22 @@ h2 {
   color: white;
 }
 
+.project .left {
+  display: block;
+  padding: 10px;
+  width: 45%;
+}
+
+.project .left .courses {
+  margin-left: 45px;
+  width: 45%;
+}
+
+.project .hack-img {
+  height: 300px;
+  margin-right: 80px;
+}
+
 .left, .right {
   display: inline;
 }
