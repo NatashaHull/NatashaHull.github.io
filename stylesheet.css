@@ -67,7 +67,7 @@ h2 {
   margin: 0;
 }
 
-h3 a {
+h3 a, .source-link {
   text-decoration: none;
   color: white;
 }
