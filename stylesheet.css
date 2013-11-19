@@ -76,6 +76,10 @@ h2 {
   color: white;
 }
 
+.projects {
+  padding-bottom: 200px;
+}
+
 .project .left {
   display: block;
   padding: 10px;
@@ -87,8 +91,8 @@ h2 {
   width: 45%;
 }
 
-.project .hack-img {
-  height: 300px;
+.project .right img {
+  width: 455px;
   margin-right: 80px;
 }
 
