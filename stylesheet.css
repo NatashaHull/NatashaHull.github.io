@@ -1,8 +1,10 @@
 body {
   font-family: helvetica, arial, sans-serif;
+  max-width: 1200px;
 }
 
 #nav {
+  max-width: 1220px;
   background-color: black;
   width: 1000%;
   margin-left: -10px;
