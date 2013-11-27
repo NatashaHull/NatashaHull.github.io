@@ -3,13 +3,17 @@
 <head>
   <link rel="stylesheet" type="text/css" href="./stylesheet.css">
   <Title>Natasha Hull-Richter</Title>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts.js"></script>
 </head>
 <body>
   <div id="nav">
     <ul>
       <li class="name">
-        <a href="#skills">Natasha Hull-Richter</a>
+        <a href="#objective">Natasha Hull-Richter</a>
       </li>
+      <li><a href="#objective">Objective</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#bio">Bio</a></li>
@@ -19,44 +23,50 @@
   </div>
 
   <div class="content">
+    <div class="even objective">
+      <h2><a id="objective" class="anchor"></a>Objective</h2>
+      <p>I'm looking for a <strong>junior web developer</strong> position that's either <strong>back-end</strong> or <strong>full-stack</strong>. <br> (I like JavaScript too, but I prefer mapping out data relationships to wrangling with the browser.) <br> My experience is mostly with <strong>Ruby on Rails</strong>, but I'm language-agnostic and <strong>a quick learner</strong>. <br> I'm especially interested in the applications of <strong>artificial intelligence</strong>. </p>
+    </div>
+
     <div class="odd">
-      <h2><a id="skills" class="anchor"></a>Skills</h2>
-      <ul>
-        <li>
-          <img src="http://www.myintervals.com/blog/wp-content/uploads/2011/12/postgresql-logo1.png"
-          title="SQL" alt="SQL"/>
-        </li>
+      <h2><a id="skills" class="anchor"></a>Skills <span style="font-size: 0.7em; font-weight: normal; font-style: italic;">(mouse over!)</span></h2>
+      <ul id="skillsList">
         <li>
           <img src="http://upload.wikimedia.org/wikipedia/commons/f/f1/Ruby_logo.png"
-          title="Ruby" alt="Ruby"/>
+          alt="Ruby"/>
         </li>
         <li>
           <img src="http://blog.smalleycreative.com/wp-content/uploads/2011/01/rails.png"
-          title="Rails" alt="Rails"/>
+          alt="Rails"/>
+        </li>
+        <li>
+          <img src="http://www.myintervals.com/blog/wp-content/uploads/2011/12/postgresql-logo1.png"
+          alt="SQL"/>
         </li>
         <li>
           <img src="http://rwdmedia.com/assets/images/javascript_logo.png"
-          title="JavaScript" alt="JavaScript"/></li>
+          alt="JavaScript"/></li>
         <li>
           <img src="http://www.unixstickers.com/image/cache/data/stickers/python/python.sh-600x600.png"
-          title="Python" alt="Python" />
+          alt="Python" />
         </li>
         <li>
           <img src="http://www.bobbyberberyan.com/wp-content/uploads/2012/03/HTML5CSS3Logos.svg"
-          title="HTML & CSS" alt="HTML & CSS" />
+          alt="HTML & CSS" />
         </li>
         <li>
           <img src="http://www.userlogos.org/files/logos/bekh6ex/jquery_white_contur.png"
-          title="jQuery" alt="jQuery" />
+          alt="jQuery" />
         </li>
         <li>
           <img src="https://www.harp.io/img/backbone.svg"
-          title="Backbone.js" alt="Backbone.js" /></li>
+          alt="Backbone.js" /></li>
         <li>
           <img src="http://itekblog.com/wp-content/uploads/2012/09/git-logo.png"
-          title="git" alt="git" class="wide" />
+          alt="git" class="wide" />
         </li>
       </ul>
+      <div id="callout" class="hidden">blah!</div>
     </div>
 
     <div class="even projects">
@@ -69,22 +79,15 @@
           </a>
         </div>
         <div class="left">
-          <h3><a target="_blank"
-            href="http://www.hackunderflow.com">Hack Underflow</a></h3>
-          <p>Stack Overflow clone. This webpage has the questions, answers, comments, and editing features of Stack Overflow. It started as a Ruby on Rails application and converted into a Backbone.js application</p>
-          <p><a target="_blank"
-            href="https://github.com/NatashaHull/HackUnderflow" class="source-link">
-            Source Code
-          </a></p>
-          <p><em>This project uses:</em></p>
-          <ul class="courses">
-            <li>&bull; Foundation stylesheets</li>
-            <li>&bull; nokogiri</li>
-            <li>&bull; kaminari</li>
-            <li>&bull; friendly_id</li>
-            <li>&bull; underscore.inflector</li>
-            <li>&bull; serializeJSON</li>
-          </ul>
+          <h3>
+            <a id="hack-underflow" class="anchor"></a>
+            <a target="_blank" href="http://www.hackunderflow.com">Hack Underflow</a>
+            <a target="_blank" href="https://github.com/NatashaHull/HackUnderflow" class="source-link">[Source Code]</a>
+          </h3>
+          <p><strong>Hack Underflow</strong> is a Stack Overflow clone that implements the questions, answers, comments, and editing features of SO. It also has an SO-inspired points system that awards privileges (such as voting and editing) at certain point levels. Hack Underflow started life as a Ruby on Rails app, but I have since converted it into a single-page Backbone.js app.</p>
+          <p>In order to seed the database of Hack Overflow with some existing questions and answers, I used <tt>nokogiri</tt> to scrape and parse a few hundred questions from Stack Overflow, for which I had to learn how XPath works.</p>
+          <p>This project also uses Foundation stylesheets, <tt>kaminari</tt>, <tt>friendly_id</tt>, <tt>underscore.inflector</tt>, and <tt>serializeJSON</tt>.</p>
+          <p><b>Favorite bit:</b> <tt><a target="_blank" href="https://github.com/NatashaHull/HackUnderflow/blob/master/db/seeds.rb">seeds.rb</a></tt>, where I scrape Stack Overflow and use the resulting data to seed my DB.</p>
         </div>
       </div>
 
@@ -96,23 +99,12 @@
           </a>
         </div>
         <div class="left">
-        <br>
-        <br>
-        <br>
-        <h3><a target="_blank"
-          href="http://git.io/0irGJw">crud_generator</a></h3>
-        <p>Rubygem that automatically creates default CRUD actions for your Rails controllers. (Inspired by a week of creating almost identical Rails Controllers for multiple projects.)</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+          <h3>
+            <a id="crud-generator" class="anchor"></a>
+            <a target="_blank" href="http://git.io/0irGJw">crud_generator</a>
+          </h3>
+          <p>A week of creating almost identical Rails controllers for multiple projects inspired me to write <b>crud_generator</b>, a rubygem that automatically creates default CRUD actions for your Rails controllers.</p>
+          <p><b>Favorite bit:</b> the <tt><a target="_blank" href="https://github.com/NatashaHull/crud_generator/blob/master/lib/crud_generator.rb#L4:L18">generate_crud_actions</a></tt> method, which can properly handle three powerful use cases in only 10 lines of code.</p>
         </div>
       </div>
 
@@ -124,24 +116,13 @@
           </a>
         </div>
         <div class="left">
-        <br>
-        <br>
-        <br>
-        <h3><a target="_blank"
-          href="http://git.io/4vwzFQ">
-          Active-Record-Lite
-        </a></h3>
-        <p>Reverse engineered version of the find, where, has many, belongs to, has one through, and has many through methods of ActiveRecord::Base.</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        </div>        
+          <h3>
+            <a id="active-record-lite" class="anchor"></a>
+            <a target="_blank" href="http://git.io/4vwzFQ">Active-Record-Lite</a>
+          </h3>
+          <p><b>Active-Record-Lite</b> is a reverse-engineered version of the <tt>find</tt>, <tt>where</tt>, <tt>has_many</tt>, <tt>belongs_to</tt>, <tt>has_one_through</tt>, and <tt>has_many_through</tt> methods of <tt>ActiveRecord::Base</tt>.</p>
+          <p><b>Favorite bit:</b> the <tt><a target="_blank" href="https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week4/W4D1/active_record_lite-skeleton/lib/active_record_lite/associatable.rb#L123-L148">has_many_through</a></tt> method, which was a particularly tricky series of joins to get right.</p>
+        </div>
       </div>
       <div class="project">
         <div class="right">
@@ -151,42 +132,28 @@
           </a>
         </div>
         <div class="left">
-        <br>
-        <br>
-        <br>
-        <h3><a target="_blank"
-          href="http://git.io/6XuiWg">Rails-Lite</a></h3>
-        <p>Recreation of ActionController::Base and Application.routes using WEBrick.</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+          <h3>
+            <a id="rails-lite" class="anchor"></a>
+            <a target="_blank" href="http://git.io/6XuiWg">Rails-Lite</a>
+          </h3>
+          <p><b>Rails-Lite</b> is a recreation of Rails's <tt>ActionController::Base</tt> and <tt>Application.routes</tt> using WEBrick.</p>
+          <p><b>Favorite bit:</b> <tt><a target="_blank" href="https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/lib/rails_lite/router.rb">router.rb</a></tt>, a concise implementation of Rails's router.</p>
         </div>
       </div>
       <div class="project"><div class="right">
-        <a target="_blank"
-        href="http://cocktail-enthusiasts.herokuapp.com">
+        <a target="_blank" href="http://cocktail-enthusiasts.herokuapp.com">
           <img src="./cocktail_enthusiasts.png">
         </a>
         </div>
         <div class="left">
-        <br>
-        <br>
-        <br>
-        <h3><a target="_blank"
-          href="https://github.com/NatashaHull/cocktail-enthusiasts">
-          Cocktail Enthusiasts
-        </a></h3>
-        <p>Discussion website for cocktails, with voting and comments, built with Rails. (This was the first Rails application I created, which I still occasionally edit and update for fun.)</p>
-        <p><a target="_blank"
-          href="https://github.com/NatashaHull/CocktailEnthusiasts" class="source-link">
-          Source Code
-        </a></p>
+          <h3>
+            <a target="_blank" href="http://cocktail-enthusiasts.herokuapp.com">
+              Cocktail Enthusiasts
+            </a>
+            <a target="_blank" href="https://github.com/NatashaHull/cocktail-enthusiasts" class="source-link">[Source Code]</a>
+          </h3>
+          <p><b>Cocktail Enthusiasts</b> is a discussion website for cocktails, with voting and comments, built with Rails. This was the first Rails application I created, and I still occasionally edit it for fun.</p>
+          <p><b>Favorite bit:</b> <tt><a target="_blank" href="https://github.com/NatashaHull/cocktail-enthusiasts/blob/master/app/assets/javascripts/design.js">design.js</a></tt>, a complex cocktail generator that holds a special place in my heart as my first major JavaScript application, messy though it may be. <a  target="_blank" href="https://cocktail-enthusiasts.herokuapp.com/design/index">[See it in action!]</a></p>
         </div>
       </div>
     </div>
@@ -194,8 +161,7 @@
     <div class="odd">
       <h2><a id="bio" class="anchor"></a>Bio</h2>
       <p>After dabbling in politics and acting, I went to UC Berkeley and studied Music and Philosophy. I discovered that I was particularly passionate about logic, but spent a lot of my time as an undergrad figuring out what I would do after I graduated.</p>
-      <p>Early in my last semester at UC Berkeley, I went to a RailsBridge (a programming event for women that uses scaffolding to demonstrate Ruby on Rails). From there, I started creating and experimenting with Ruby on Rails applications (the main one being Cocktail Enthusiasts), as my first excursion into programming. I had previously worked with HTML before, but had not yet tried programming. I quickly realized that all the things I loved about logic were also important for programming and have continued programming since.</p>
-      <p>I am currently looking for a position as a backend web developer. At the moment, I have worked with Ruby, Rails, SQL, JavaScript, jQuery, and Backbone. (For one project, I built a full stack Rails application and then added Backbone).</p>
+      <p>Early in my last semester at UC Berkeley, I went to a RailsBridge (a programming event for women that uses scaffolding to demonstrate Ruby on Rails). From there, I started creating and experimenting with Ruby on Rails applications (the main one being Cocktail Enthusiasts), as my first excursion into programming. I quickly realized that all the things I loved about logic were also important for programming and have continued programming since.</p>
     </div>
 
     <div class="even">
@@ -222,21 +188,13 @@
       <h2><a id="contact" class="anchor"></a>Contact</h2>
       <ul>
         <li>
-          <a target="_blank"
-          href="https://www.linkedin.com/in/natashahull/">
-            <img src="http://www.acrnet.org/uploadedImages/Get_Involved/Linkedin.png">
-          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/natashahull/"><img src="http://www.acrnet.org/uploadedImages/Get_Involved/Linkedin.png"></a>
         </li>
         <li>
-          <a target="_blank"
-          href="https://github.com/NatashaHull">
-            <img src="http://spatialhadoop.cs.umn.edu/images/github-128.png">
-          </a>
+          <a target="_blank" href="https://github.com/NatashaHull"><img src="http://spatialhadoop.cs.umn.edu/images/github-128.png"></a>
         </li>
         <li>
-          <a href="mailto:natashaalex.hull@gmail.com">
-            <img src="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Communication-email-2-icon.png">
-          </a>
+          <a href="mailto:natashaalex.hull@gmail.com"><img src="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Communication-email-2-icon.png"></a>
         </li>
       </ul>
     </div>

@@ -5,6 +5,10 @@ body {
   margin-right: auto;
 }
 
+a {
+  color: white;
+}
+
 #nav {
   max-width: 1220px;
   background-color: black;
@@ -13,6 +17,7 @@ body {
   margin-top: -10px;
   height: 45px;
   position: fixed;
+  z-index: 99;
 }
 
 #nav ul {
@@ -34,8 +39,8 @@ body {
 
 a.anchor{
   display: block;
-  position: relative; 
-  top: -50px; 
+  position: relative;
+  top: -58px;
   visibility: hidden;
 }
 
@@ -71,9 +76,18 @@ h2 {
   margin: 0;
 }
 
-h3 a, .source-link {
+h3 a {
   text-decoration: none;
   color: white;
+}
+
+.source-link {
+  text-decoration: underline;
+  font-size: 0.85em;
+}
+
+.source-link:hover {
+  text-decoration: none;
 }
 
 .odd {
@@ -91,18 +105,24 @@ h3 a, .source-link {
   width: 80px;
 }
 
+.objective p {
+  text-align: center;
+  line-height: 1.4em;
+}
+
 .projects {
   padding-bottom: 200px;
+  clear: both;
+}
+
+.project {
+  clear: both;
 }
 
 .project .left {
   display: block;
   padding: 10px;
-  width: 45%;
-}
-
-.project .left .courses {
-  margin-left: 45px;
+  padding-top: 40px;
   width: 45%;
 }
 
@@ -152,4 +172,46 @@ ul li {
 
 img {
   height: 80px;
+}
+
+body {
+  font-family: Helvetica;
+  font-size: 13px;
+}
+
+#callout {
+  min-height: 25px;
+  width: 150px;
+  float: left;
+  top: -30px;
+  background-color: #444;
+  background-image: -moz-linear-gradient(top, #444, #444);
+  position: relative;
+  color: #ccc;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 20px #999;
+  margin: 25px;
+  border: 1px solid #333;
+  text-shadow: 0 0 1px #000;
+  margin-bottom: -999px;
+}
+
+#callout.hidden {
+  visibility: hidden;
+}
+
+#callout a {
+  color: white;
+}
+
+#callout::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 0.8em solid transparent;
+  position: absolute;
+  left: 45%;
+  top: -20px;
+  border-bottom: 10px solid #444;
 }
