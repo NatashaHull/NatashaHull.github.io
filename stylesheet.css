@@ -1,4 +1,7 @@
+
 body {
+  font-size: 13px;
+  background-color: #040507;
   font-family: helvetica, arial, sans-serif;
   max-width: 1200px;
   margin-left: auto;
@@ -11,13 +14,14 @@ a {
 
 #nav {
   max-width: 1220px;
-  background-color: black;
+  background-color: #2D4564;
   width: 1000%;
   margin-left: -10px;
   margin-top: -10px;
   height: 45px;
   position: fixed;
   z-index: 99;
+  font-family: "convergence";
 }
 
 #nav ul {
@@ -27,7 +31,7 @@ a {
 }
 
 #nav ul a {
-  color: #cccccc;
+  color: #ddd;
   display: inline;
   font-size: 18px;
   text-decoration: none;
@@ -91,11 +95,11 @@ h3 a {
 }
 
 .odd {
-  background-color: #cccccc;
+  background-color: #BED7F7;
 }
 
 .even {
-  background-color: #3D5C5C;
+  background-color: #111C2B;
   color: white;
 }
 
@@ -172,11 +176,6 @@ ul li {
 
 img {
   height: 80px;
-}
-
-body {
-  font-family: Helvetica;
-  font-size: 13px;
 }
 
 #callout {
