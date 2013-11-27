@@ -2,7 +2,7 @@
 body {
   font-size: 13px;
   background-color: #040507;
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -78,6 +78,7 @@ a.anchor{
 
 h2 {
   margin: 0;
+  font-family: 'convergence';
 }
 
 h3 a {
@@ -213,4 +214,8 @@ img {
   left: 45%;
   top: -20px;
   border-bottom: 10px solid #444;
+}
+
+.contact {
+  padding: 0;
 }
