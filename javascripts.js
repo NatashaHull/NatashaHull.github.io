@@ -20,7 +20,7 @@ $(document).ready(function () {
   $(window).resize(function () {
     $('#callout').addClass('hidden').css('left', 0);
     callOutStartX = $('#callout').position().left;
-  })
+  });
 
   $('#skillsList li').mouseover(function () {
     var x = $(this).position().left + $(this).width()/2 - callOutStartX - 100;
