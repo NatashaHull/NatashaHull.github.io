@@ -114,6 +114,10 @@ h3 a {
   line-height: 1.4em;
 }
 
+#skillsList {
+  margin-right: 40px;
+}
+
 .projects {
   padding-bottom: 200px;
   clear: both;

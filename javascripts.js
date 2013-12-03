@@ -10,7 +10,8 @@ $(document).ready(function () {
     "Design isn't as fun as programming for me, but I know enough <strong>CSS</strong> to get by.",
     "I've built a lot of small <a target='_blank' href='https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week6'>JavaScript games</a> using <strong>jQuery</strong>.",
     "I have converted <a href='#hack-underflow'>a complex Rails app</a> into a client-side <strong>Backbone.js</strong> app.",
-    "I use <strong>git</strong> religiously. Check out <a target='_blank' href='https://github.com/NatashaHull'>my Github</a>!"
+    "I use <strong>git</strong> religiously. Check out <a target='_blank' href='https://github.com/NatashaHull'>my Github</a>!",
+    "I am a proud user of Lubuntu 13.04. I'm also proficient in using Windows and OS X."
   ];
 
   $('body').click(function () {
