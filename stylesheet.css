@@ -114,6 +114,23 @@ h3 a {
   line-height: 1.4em;
 }
 
+.experience ul {
+  width: 45%;
+  margin-left: 100px;
+  text-align: left;
+}
+
+.experience li {
+  display: block;
+}
+
+.experience img {
+  float: right;
+  margin-right: 14.5em;
+  margin-top: 50px;
+  height: 150px;
+}
+
 #skillsList {
   margin-right: 40px;
 }
